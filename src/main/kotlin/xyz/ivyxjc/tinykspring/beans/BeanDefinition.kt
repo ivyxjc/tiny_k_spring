@@ -1,10 +1,7 @@
 package xyz.ivyxjc.tinykspring.beans
 
 
-class BeanDefinition constructor(beanName: String, beanClassName: String) {
-
-    var beanName: String
-    val beanClassName: String
+class BeanDefinition constructor(val beanName: String, val beanClassName: String) {
 
     var bean: Any? = null
 
@@ -12,11 +9,6 @@ class BeanDefinition constructor(beanName: String, beanClassName: String) {
         get() = Class.forName(beanClassName)
 
     var propertyValues: PropertyValues = PropertyValues()
-
-    init {
-        this.beanClassName = beanClassName
-        this.beanName = beanName
-    }
 
 
 }
