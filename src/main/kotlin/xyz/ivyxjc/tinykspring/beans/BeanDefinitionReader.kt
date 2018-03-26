@@ -9,5 +9,4 @@ interface BeanDefinitionReader {
 
 abstract class AbstractBeanDefinitionReader(val resourceLoader: ResourceLoader) : BeanDefinitionReader {
     val registry = mutableMapOf<String, BeanDefinition>()
-
 }

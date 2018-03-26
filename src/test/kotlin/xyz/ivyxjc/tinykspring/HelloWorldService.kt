@@ -1,18 +1,28 @@
 package xyz.ivyxjc.tinykspring
 
+import org.junit.Assert
+
 
 /**
  * @author yihua.huang@dianping.com
  */
 class HelloWorldService {
 
-    private var text: String? = null
+    var text: String? = null
+    var outputService: OutputService? = null
 
     fun helloWorld() {
-        println(text)
+        outputService?.output("Hello~!!")
     }
+}
 
-    fun setText(text: String) {
-        this.text = text
+
+class OutputService {
+
+    var helloWorldService: HelloWorldService? = null
+
+    fun output(text: String) {
+        Assert.assertNotNull(helloWorldService)
+        println(text)
     }
 }

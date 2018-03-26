@@ -1,7 +1,7 @@
 package xyz.ivyxjc.tinykspring.beans
 
 
-data class PropertyValue(var beanName: String, var bean: Any)
+data class PropertyValue(val fieldName: String, val value: Any)
 
 
 class PropertyValues {
