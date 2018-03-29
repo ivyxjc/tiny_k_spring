@@ -1,7 +1,7 @@
 package xyz.ivyxjc.tinykspring.beans.factory
 
 import xyz.ivyxjc.tinykspring.beans.BeanDefinition
-import xyz.ivyxjc.tinykspring.beans.BeanDefinitionNotfoundException
+import xyz.ivyxjc.tinykspring.beans.BeanDefinitionNotFoundException
 import xyz.ivyxjc.tinykspring.beans.BeanReference
 
 interface BeanFactory {
@@ -14,7 +14,7 @@ abstract class AbstractBeanFactory : BeanFactory {
 
     override fun getBean(beanName: String): Any {
         val beanDefinition = beanDefinitionMap[beanName]
-                ?: throw BeanDefinitionNotfoundException("Bean Definition not found")
+                ?: throw BeanDefinitionNotFoundException("Bean Definition not found")
         beanDefinition.bean ?: createBean(beanDefinition)
         return beanDefinition.bean!!
     }

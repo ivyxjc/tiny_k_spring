@@ -5,11 +5,7 @@ data class PropertyValue(val fieldName: String, val value: Any)
 
 
 class PropertyValues {
-    var values: MutableList<PropertyValue>
-
-    init {
-        values = ArrayList()
-    }
+    var values = mutableListOf<PropertyValue>()
 
     fun addPropertyValue(propertyValue: PropertyValue) {
         values.add(propertyValue)
