@@ -1,4 +1,4 @@
-package xyz.ivyxjc.tinykspring.beans.context
+package xyz.ivyxjc.tinykspring.context
 
 import xyz.ivyxjc.tinykspring.beans.factory.AbstractBeanFactory
 import xyz.ivyxjc.tinykspring.beans.factory.AutowireCapableBeanFactory
@@ -30,7 +30,7 @@ class ClasspathXmlApplicationContext : AbstractApplicationContext {
     }
 
     override fun refresh() {
-        var xmlBeanDefinitionReader = XmlBeanDefinitionReader(ResourceLoader())
+        val xmlBeanDefinitionReader = XmlBeanDefinitionReader(ResourceLoader())
         xmlBeanDefinitionReader.loadBeanDefinitions(configLocation)
         xmlBeanDefinitionReader.registry.forEach {
             beanFactory.registerBeanDefinition(it.value)

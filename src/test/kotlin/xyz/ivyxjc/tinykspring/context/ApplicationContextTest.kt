@@ -2,7 +2,6 @@ package xyz.ivyxjc.tinykspring.context
 
 import org.junit.Test
 import xyz.ivyxjc.tinykspring.HelloWorldService
-import xyz.ivyxjc.tinykspring.beans.context.ClasspathXmlApplicationContext
 
 
 class ApplicationContextTest {

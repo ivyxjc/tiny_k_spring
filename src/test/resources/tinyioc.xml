@@ -7,7 +7,7 @@
         <property name="helloWorldService" ref="helloWorldService"></property>
     </bean>
 
-    <bean name="helloWorldService" class="xyz.ivyxjc.tinykspring.HelloWorldService">
+  <bean name="helloWorldService" class="xyz.ivyxjc.tinykspring.HelloWorldServiceImpl">
         <property name="text" value="Hello World!"></property>
         <property name="outputService" ref="outputService"></property>
     </bean>

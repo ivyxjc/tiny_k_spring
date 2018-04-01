@@ -21,7 +21,7 @@ class BeanFactoryTest {
         val beanFactory = AutowireCapableBeanFactory()
 
         // 2.bean定义
-        val beanDefinition = BeanDefinition("helloWorldService", "xyz.ivyxjc.tinykspring.HelloWorldService")
+        val beanDefinition = BeanDefinition("mHelloWorldServiceImpl", "xyz.ivyxjc.tinykspring.HelloWorldServiceImpl")
 
         // 3.设置属性
         val propertyValues = PropertyValues()
@@ -32,7 +32,7 @@ class BeanFactoryTest {
         beanFactory.registerBeanDefinition(beanDefinition)
 
         // 5.获取bean
-        val helloWorldService = beanFactory.getBean("helloWorldService") as HelloWorldService
+        val helloWorldService = beanFactory.getBean("mHelloWorldServiceImpl") as HelloWorldServiceImpl
         helloWorldService.helloWorld()
     }
 

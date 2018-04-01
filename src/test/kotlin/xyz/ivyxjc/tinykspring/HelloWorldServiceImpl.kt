@@ -6,12 +6,16 @@ import org.junit.Assert
 /**
  * @author yihua.huang@dianping.com
  */
-class HelloWorldService {
+interface HelloWorldService {
+    fun helloWorld()
+}
+
+class HelloWorldServiceImpl : HelloWorldService {
 
     var text: String? = null
     var outputService: OutputService? = null
 
-    fun helloWorld() {
+    override fun helloWorld() {
         outputService?.output("Hello~!!")
     }
 }
